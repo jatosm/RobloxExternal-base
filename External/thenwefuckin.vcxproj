@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5394880C-AFC4-425E-AD9E-56A7664E2BC5}</ProjectGuid>
+    <RootNamespace>thenwefuckin</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(ProjectDir)src\menu;$(ProjectDir)src\menu\imgui;$(ProjectDir)third_party\lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(ProjectDir)src\menu;$(ProjectDir)src\menu\imgui;$(ProjectDir)third_party\lua\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\app\app.h" />
+    <ClInclude Include="src\app\session.h" />
+    <ClInclude Include="src\app\frame.h" />
+    <ClInclude Include="src\menu\core\gui\menu.h" />
+    <ClInclude Include="src\menu\core\gui\mascot.h" />
+    <ClInclude Include="src\menu\core\gui\resources\font.h" />
+    <ClInclude Include="src\menu\core\gui\resources\icons.h" />
+    <ClInclude Include="src\menu\core\overlay\overlay.h" />
+    <ClInclude Include="src\menu\overlay\settings.h" />
+    <ClInclude Include="src\menu\resources\font.h" />
+    <ClInclude Include="src\menu\resources\ui_click.h" />
+    <ClInclude Include="src\menu\resources\ui_slider.h" />
+    <ClInclude Include="src\menu\resources\verdana.h" />
+    <ClInclude Include="src\menu\imgui\imconfig.h" />
+    <ClInclude Include="src\menu\imgui\imgui.h" />
+    <ClInclude Include="src\menu\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="src\menu\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="src\menu\imgui\imgui_internal.h" />
+    <ClInclude Include="src\menu\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\menu\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\menu\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\features\aim\autoshoot\autoshoot.h" />
+    <ClInclude Include="src\features\aim\core\aim.h" />
+    <ClInclude Include="src\features\aim\predict\predict.h" />
+    <ClInclude Include="src\features\visual\players\avatars.h" />
+    <ClInclude Include="src\features\visual\players\friends.h" />
+    <ClInclude Include="src\features\aim\distance\distance.h" />
+    <ClInclude Include="src\features\aim\health\health.h" />
+    <ClInclude Include="src\features\aim\memory\memory.h" />
+    <ClInclude Include="src\features\aim\mouse\mouse.h" />
+    <ClInclude Include="src\features\aim\smooth\smooth.h" />
+    <ClInclude Include="src\features\aim\tracking\tracking.h" />
+    <ClInclude Include="src\features\aim\viewport\viewport.h" />
+    <ClInclude Include="src\features\aim\pftarget\pftarget.h" />
+    <ClInclude Include="src\features\aim\raycast\raycast.h" />
+    <ClInclude Include="src\features\aim\wraith\wraith.h" />
+    <ClInclude Include="src\features\misc\core\misc.h" />
+    <ClInclude Include="src\features\misc\explorer\explorer.h" />
+    <ClInclude Include="src\features\misc\explorer\assets\dex_icons.h" />
+    <ClInclude Include="src\features\misc\fov\fov.h" />
+    <ClInclude Include="src\features\misc\antiafk\antiafk.h" />
+    <ClInclude Include="src\features\misc\nofall\nofall.h" />
+    <ClInclude Include="src\features\misc\zoom\zoom.h" />
+    <ClInclude Include="src\features\misc\noclip\noclip.h" />
+    <ClInclude Include="src\features\misc\freecam\freecam.h" />
+    <ClInclude Include="src\features\misc\spectate\spectate.h" />
+    <ClInclude Include="src\features\misc\gravity\gravity.h" />
+    <ClInclude Include="src\features\misc\hipheight\hipheight.h" />
+    <ClInclude Include="src\features\misc\infjump\infjump.h" />
+    <ClInclude Include="src\features\misc\hitsound\hitsound.h" />
+    <ClInclude Include="src\features\misc\jumppower\jumppower.h" />
+    <ClInclude Include="src\features\misc\walkspeed\walkspeed.h" />
+    <ClInclude Include="src\features\visual\world\time\time.h" />
+    <ClInclude Include="src\features\visual\world\env\env.h" />
+    <ClInclude Include="src\features\visual\world\clock\clock.h" />
+    <ClInclude Include="src\features\visual\world\night\night.h" />
+    <ClInclude Include="src\features\visual\world\fog\fog.h" />
+    <ClInclude Include="src\features\visual\world\exposure\exposure.h" />
+    <ClInclude Include="src\features\visual\world\ambient\ambient.h" />
+    <ClInclude Include="src\features\visual\world\fullbright\fullbright.h" />
+    <ClInclude Include="src\features\visual\world\shadows\shadows.h" />
+    <ClInclude Include="src\features\visual\world\grass\grass.h" />
+    <ClInclude Include="src\features\visual\box\box.h" />
+    <ClInclude Include="src\features\visual\core\visual.h" />
+    <ClInclude Include="src\features\visual\headdot\headdot.h" />
+    <ClInclude Include="src\features\visual\health\health.h" />
+    <ClInclude Include="src\features\visual\name\name.h" />
+    <ClInclude Include="src\features\visual\oof\oof.h" />
+    <ClInclude Include="src\features\visual\skeleton\skeleton.h" />
+    <ClInclude Include="src\features\visual\preview\player_preview.h" />
+    <ClInclude Include="src\features\visual\tracer\tracer.h" />
+    <ClInclude Include="src\features\visual\world\core\types.h" />
+    <ClInclude Include="src\features\visual\world\core\scan.h" />
+    <ClInclude Include="src\features\visual\world\core\draw.h" />
+    <ClInclude Include="src\features\visual\world\ore\ore.h" />
+    <ClInclude Include="src\features\visual\world\plants\plants.h" />
+    <ClInclude Include="src\features\visual\world\bots\bots.h" />
+    <ClInclude Include="src\features\visual\world\animals\animals.h" />
+    <ClInclude Include="src\features\visual\world\tools\tools.h" />
+    <ClInclude Include="src\features\visual\world\crates\crates.h" />
+    <ClInclude Include="src\features\visual\world\keycards\keycards.h" />
+    <ClInclude Include="src\utility\cache\math.h" />
+    <ClInclude Include="src\utility\cache\cache.h" />
+    <ClInclude Include="src\utility\memory\syscall.h" />
+    <ClInclude Include="src\utility\struct\offsets.h" />
+    <ClInclude Include="src\utility\struct\structs.h" />
+    <ClInclude Include="src\utility\struct\world2screen.h" />
+    <ClInclude Include="src\utility\global\globals.h" />
+    <ClInclude Include="src\utility\logger\logger.h" />
+    <ClInclude Include="src\utility\stb\stb_image.h" />
+    <ClInclude Include="src\features\lua\lua_editor.h" />
+    <ClInclude Include="src\features\lua\vm\lua_vm.h" />
+    <ClInclude Include="src\features\lua\vm\lua_core.h" />
+    <ClInclude Include="src\features\lua\vm\lua_api.h" />
+    <ClInclude Include="src\features\lua\vm\lua_draw.h" />
+    <ClInclude Include="src\features\lua\vm\lua_game.h" />
+    <ClInclude Include="src\features\lua\vm\game_gc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\app\app.cpp" />
+    <ClCompile Include="src\app\session.cpp" />
+    <ClCompile Include="src\app\frame.cpp" />
+    <ClCompile Include="src\menu\core\overlay\overlay.cpp" />
+    <ClCompile Include="src\menu\core\gui\mascot.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\menu\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\features\aim\autoshoot\autoshoot.cpp" />
+    <ClCompile Include="src\features\aim\core\aim.cpp" />
+    <ClCompile Include="src\features\aim\predict\predict.cpp" />
+    <ClCompile Include="src\features\visual\players\avatars.cpp" />
+    <ClCompile Include="src\features\visual\players\friends.cpp" />
+    <ClCompile Include="src\features\aim\distance\distance.cpp" />
+    <ClCompile Include="src\features\aim\health\health.cpp" />
+    <ClCompile Include="src\features\aim\memory\memory.cpp" />
+    <ClCompile Include="src\features\aim\mouse\mouse.cpp" />
+    <ClCompile Include="src\features\aim\smooth\smooth.cpp" />
+    <ClCompile Include="src\features\aim\tracking\tracking.cpp" />
+    <ClCompile Include="src\features\aim\viewport\viewport.cpp" />
+    <ClCompile Include="src\features\aim\pftarget\pftarget.cpp" />
+    <ClCompile Include="src\features\aim\raycast\raycast.cpp" />
+    <ClCompile Include="src\features\aim\wraith\wraith.cpp" />
+    <ClCompile Include="src\features\misc\core\misc.cpp" />
+    <ClCompile Include="src\features\misc\explorer\explorer.cpp" />
+    <ClCompile Include="src\features\misc\fov\fov.cpp" />
+    <ClCompile Include="src\features\misc\antiafk\antiafk.cpp" />
+    <ClCompile Include="src\features\misc\nofall\nofall.cpp" />
+    <ClCompile Include="src\features\misc\zoom\zoom.cpp" />
+    <ClCompile Include="src\features\misc\noclip\noclip.cpp" />
+    <ClCompile Include="src\features\misc\fly\fly.cpp" />
+    <ClCompile Include="src\features\visual\world\geo\geo.cpp" />
+    <ClCompile Include="src\features\misc\freecam\freecam.cpp" />
+    <ClCompile Include="src\features\misc\spectate\spectate.cpp" />
+    <ClCompile Include="src\features\misc\gravity\gravity.cpp" />
+    <ClCompile Include="src\features\misc\hipheight\hipheight.cpp" />
+    <ClCompile Include="src\features\misc\infjump\infjump.cpp" />
+    <ClCompile Include="src\features\misc\hitsound\hitsound.cpp" />
+    <ClCompile Include="src\features\misc\jumppower\jumppower.cpp" />
+    <ClCompile Include="src\features\misc\walkspeed\walkspeed.cpp" />
+    <ClCompile Include="src\features\visual\world\time\time.cpp" />
+    <ClCompile Include="src\features\visual\world\env\env.cpp" />
+    <ClCompile Include="src\features\visual\world\clock\clock.cpp" />
+    <ClCompile Include="src\features\visual\world\night\night.cpp" />
+    <ClCompile Include="src\features\visual\world\fog\fog.cpp" />
+    <ClCompile Include="src\features\visual\world\exposure\exposure.cpp" />
+    <ClCompile Include="src\features\visual\world\ambient\ambient.cpp" />
+    <ClCompile Include="src\features\visual\world\fullbright\fullbright.cpp" />
+    <ClCompile Include="src\features\visual\world\shadows\shadows.cpp" />
+    <ClCompile Include="src\features\visual\world\grass\grass.cpp" />
+    <ClCompile Include="src\features\visual\box\box.cpp" />
+    <ClCompile Include="src\features\visual\core\visual.cpp" />
+    <ClCompile Include="src\features\visual\preview\player_preview.cpp" />
+    <ClCompile Include="src\features\visual\headdot\headdot.cpp" />
+    <ClCompile Include="src\features\visual\health\health.cpp" />
+    <ClCompile Include="src\features\visual\name\name.cpp" />
+    <ClCompile Include="src\features\visual\oof\oof.cpp" />
+    <ClCompile Include="src\features\visual\skeleton\skeleton.cpp" />
+    <ClCompile Include="src\features\visual\tracer\tracer.cpp" />
+    <ClCompile Include="src\features\visual\world\core\scan.cpp" />
+    <ClCompile Include="src\features\visual\world\core\draw.cpp" />
+    <ClCompile Include="src\features\visual\world\ore\ore.cpp" />
+    <ClCompile Include="src\features\visual\world\plants\plants.cpp" />
+    <ClCompile Include="src\features\visual\world\bots\bots.cpp" />
+    <ClCompile Include="src\features\visual\world\animals\animals.cpp" />
+    <ClCompile Include="src\features\visual\world\tools\tools.cpp" />
+    <ClCompile Include="src\features\visual\world\crates\crates.cpp" />
+    <ClCompile Include="src\features\visual\world\keycards\keycards.cpp" />
+    <ClCompile Include="src\features\lua\vm\lua_vm.cpp" />
+    <ClCompile Include="src\features\lua\vm\lua_api.cpp" />
+    <ClCompile Include="src\features\lua\vm\lua_draw.cpp" />
+    <ClCompile Include="src\features\lua\vm\lua_game.cpp" />
+    <ClCompile Include="src\features\lua\vm\game_gc.cpp" />
+    <ClCompile Include="third_party\lua\core\lapi.c" />
+    <ClCompile Include="third_party\lua\libs\lauxlib.c" />
+    <ClCompile Include="third_party\lua\libs\lbaselib.c" />
+    <ClCompile Include="third_party\lua\core\lcode.c" />
+    <ClCompile Include="third_party\lua\libs\lcorolib.c" />
+    <ClCompile Include="third_party\lua\core\lctype.c" />
+    <ClCompile Include="third_party\lua\libs\ldblib.c" />
+    <ClCompile Include="third_party\lua\core\ldebug.c" />
+    <ClCompile Include="third_party\lua\core\ldo.c" />
+    <ClCompile Include="third_party\lua\core\ldump.c" />
+    <ClCompile Include="third_party\lua\core\lfunc.c" />
+    <ClCompile Include="third_party\lua\core\lgc.c" />
+    <ClCompile Include="third_party\lua\libs\linit.c" />
+    <ClCompile Include="third_party\lua\libs\liolib.c" />
+    <ClCompile Include="third_party\lua\core\llex.c" />
+    <ClCompile Include="third_party\lua\libs\lmathlib.c" />
+    <ClCompile Include="third_party\lua\core\lmem.c" />
+    <ClCompile Include="third_party\lua\libs\loadlib.c" />
+    <ClCompile Include="third_party\lua\core\lobject.c" />
+    <ClCompile Include="third_party\lua\core\lopcodes.c" />
+    <ClCompile Include="third_party\lua\libs\loslib.c" />
+    <ClCompile Include="third_party\lua\core\lparser.c" />
+    <ClCompile Include="third_party\lua\core\lstate.c" />
+    <ClCompile Include="third_party\lua\core\lstring.c" />
+    <ClCompile Include="third_party\lua\libs\lstrlib.c" />
+    <ClCompile Include="third_party\lua\core\ltable.c" />
+    <ClCompile Include="third_party\lua\libs\ltablib.c" />
+    <ClCompile Include="third_party\lua\core\ltm.c" />
+    <ClCompile Include="third_party\lua\core\lundump.c" />
+    <ClCompile Include="third_party\lua\libs\lutf8lib.c" />
+    <ClCompile Include="third_party\lua\core\lvm.c" />
+    <ClCompile Include="third_party\lua\core\lzio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Masm Include="src\utility\memory\rax.asm" Condition="'$(Platform)'=='x64'" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
